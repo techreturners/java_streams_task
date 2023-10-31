@@ -6,6 +6,7 @@ import org.techreturners.mockdata.MockData;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class ImperativeVsDeclarativeApproach {
 
@@ -46,4 +47,7 @@ public class ImperativeVsDeclarativeApproach {
                 .toList();
         filteredList.forEach(System.out::println);
     }
+
+    private static Predicate<Person> getPerson18OrUnder = s -> s.age() <= 18;
+
 }
